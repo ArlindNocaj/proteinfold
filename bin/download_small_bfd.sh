@@ -35,7 +35,7 @@ SOURCE_URL="https://storage.googleapis.com/alphafold-databases/reduced_dbs/bfd-f
 BASENAME=$(basename "${SOURCE_URL}")
 
 mkdir --parents "${ROOT_DIR}"
-aria2c "${SOURCE_URL}" --dir="${ROOT_DIR}"
+aria2c "${SOURCE_URL}" --check-certificate=false --dir="${ROOT_DIR}"
 pushd "${ROOT_DIR}"
 gunzip "${ROOT_DIR}/${BASENAME}"
 popd

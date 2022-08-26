@@ -35,4 +35,4 @@ SOURCE_URL="ftp://ftp.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt"
 BASENAME=$(basename "${SOURCE_URL}")
 
 mkdir --parents "${ROOT_DIR}"
-aria2c "${SOURCE_URL}" --dir="${ROOT_DIR}"
+aria2c "${SOURCE_URL}" --check-certificate=false --dir="${ROOT_DIR}"
